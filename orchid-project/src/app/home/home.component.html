@@ -1,13 +1,24 @@
-<div class="body">
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
-<p>home works!</p>
+<!-- <div class="body">
+<p>
+    <img src="assets/flower-image/upload.png">
+</p>
+<div class="seriesImage">
+
+</div>
 </div>
 
-
+ -->
+ <div class="image-container">
+    <div class="arrow arrow-left" (click)="scrollLeft()"></div>
+    <div class="image-scroll" #scrollRef>
+      <div class="image-item" *ngFor="let image of images" (click)="showImage(image)">
+        <img [src]="image.url" alt="Image" />
+      </div>
+    </div>
+    <div class="arrow arrow-right" (click)="scrollRight()"></div>
+  </div>
+  
+  <div class="selected-image" *ngIf="selectedImage">
+    <img [src]="selectedImage.url" alt="Selected Image" />
+  </div>
+  

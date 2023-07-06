@@ -3,3 +3,60 @@
     height: 100%;
     width: 100%;
 }
+
+img{
+    height: 300px;
+    width: 300px;
+    border: 2px solid salmon;
+
+}
+.seriesImage{
+    height: 100px;
+    width: 500px;
+    border: 3px solid rgb(225, 219, 54);
+    left: 3px;
+
+}
+
+
+.image-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .arrow {
+    width: 30px;
+    height: 30px;
+    background-image: url('assets/flower-image/uplaod.png'); /* Replace with your arrow icon */
+    background-size: cover;
+    cursor: pointer;
+  }
+  
+  .arrow-left {
+    transform: rotate(180deg);
+  }
+  
+  .image-scroll {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .image-item {
+    flex-shrink: 0;
+    margin-right: 10px;
+    scroll-snap-align: center;
+    cursor: pointer;
+  }
+  
+  .selected-image {
+    text-align: center;
+  }
+  
+  .selected-image img {
+    max-width: 100%;
+    max-height: 400px; /* Set the desired dimensions for the selected image */
+  }
+  
